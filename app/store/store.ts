@@ -1,12 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from '../componentes/counter/CounterSlice';
-import galleryReducer from '../componentes/gallery/GallerySlice'; // Importando o reducer da galeria
+import galleryReducer from '../componentes/gallery/GallerySlice'; 
+import todoReducer from '../componentes/todo/TodoSlice';
+import kanbanReducer from '../componentes/kanban/KanbanSlice';
 
 
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
         gallery: galleryReducer, // Adicionando a galeria à store
+        todo: todoReducer,
+        kanban: kanbanReducer,
     },
 });
 
